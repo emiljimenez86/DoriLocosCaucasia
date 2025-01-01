@@ -1,0 +1,74 @@
+
+.btn-purple {
+    background-color: purple;
+    color: white;
+    border: none;
+    
+}
+
+.btn-purple:hover {
+    background-color: #800080;
+    color: #fff;
+}
+.btn {
+    font-size: 16px;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.btn-danger {
+    margin-left: 0%;
+}
+
+header {
+    background-image: url(./imagenes/empaque.jpg);
+}
+
+.megaqueso {
+    background-image: url(./imagenes/doritos-megaqueso.png);
+}
+.tacos {
+    background-image: url(./imagenes/sombrero.jpg);
+    background-position: center;
+}
+
+.img-fluid {
+    margin-top: 0%;
+    border-radius: 10%;
+
+}
+.h5 {
+    font-size: 48px;
+    font-weight: bold;
+
+}
+.h8 {
+    font-weight: bold;
+}
+main {
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+.h6 {
+    font-size: 22px;
+    font-weight: bold;
+
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: index 1000;
+    padding: 1rem;
+  
+}
+@media (max-width: 576px) {
+    button {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+}

@@ -22,21 +22,29 @@
                       <div class="card h-100">
                           <img src="./imagenes/flamin-hot.jpg" alt="dorito-flamin-hot" class="card-img-top menu-img">
                           <div class="card-body">
-                              <h5 class="card-title text-center">Dorito flamin Hot $15,000</h5>
-                              <ul>
-                                  <li>Pollo desmechado</li>
-                                  <li>Carne desmechada</li>
-                                  <li>Salchicha ranchera</li>
-                                  <li>Tocineta</li>
-                                  <li>Maicitos</li>
-                                  <li>Pico e gallo (Cebolla-cilantro-tomate)</li>
-                                  <li>Ripio de papa</li>
-                                  <li>Queso costeño</li>
-                                  <li>Queso crema</li>
-                                  <li>Tajín</li>
-                                  <li>Salsas (Guacamole de la casa-Maíz-Tomate)</li>
-                              </ul>
-                              <a href="https://wa.me/+573153644267?text=Hola,%20quiero%20un%20Dorito%20Flamin%20Hot%20de%20$15.000" class="btn btn-success" target="_blank">Pedir por WhatsApp</a>
+                              <h5 class="card-title text-center">Dorito flamin Hot $15.000 </h5>
+                              
+                              <button class="btn-detalle" onclick="toggleDetalle(this)">Detalles</button>
+                              <div class="plato-detalle">
+                            
+                                    <ul>
+                                        <li>Pollo desmechado</li>
+                                        <li>Carne desmechada</li>
+                                        <li>Salchicha ranchera</li>
+                                        <li>Tocineta</li>
+                                        <li>Maicitos</li>
+                                        <li>Pico e gallo (Cebolla-cilantro-tomate)</li>
+                                        <li>Ripio de papa</li>
+                                        <li>Queso costeño</li>
+                                        <li>Queso crema</li>
+                                        <li>Tajín</li>
+                                        <li>Salsas (Guacamole de la casa-Maíz-Tomate)</li>
+                                    </ul>
+                                
+                                  
+                              </div>
+                              
+                              <a href="https://wa.me/+573153644267?text=Hola,%20quiero%20un%20Dorito%20Flamin%20Hot%20de%20$15.000" class="btn btn-success" target="_blank">Pedir por WhatsApp domicilio</a>
                           </div>
                       </div>
                   </div>
@@ -50,7 +58,8 @@
                           <img src="./imagenes/MegaQuesoFamiliar.jpeg" alt="dorito-flamin-hot" class="card-img-top menu-img">
                           <div class="card-body">
                               <h5 class="card-title text-center">Dorito flamin Hot tamaño familiar $22,000</h5>
-                              
+                              <button class="btn-detalle" onclick="toggleDetalle(this)">Detalles</button>
+                              <div class="plato-detalle">
                               <ul>
                                   <li>Pollo desmechado</li>
                                   <li>Carne desmechada</li>
@@ -64,7 +73,8 @@
                                   <li>Tajín</li>
                                   <li>Salsas (Guacamole de la casa-Maíz-Tomate)</li>
                               </ul>
-                              <a href="https://wa.me/+573153644267?text=Hola,%20quiero%20un%20Dorito%20Flamin%20Hot%20familiar%20de%20$22.000" class="btn btn-success" target="_blank">Pedir por WhatsApp</a>
+                            </div>
+                              <a href="https://wa.me/+573153644267?text=Hola,%20quiero%20un%20Dorito%20Flamin%20Hot%20familiar%20de%20$22.000" class="btn btn-success" target="_blank">Pedir por WhatsApp domicilio</a>
                           </div>
                       </div>
                   </div>
@@ -78,7 +88,8 @@
                         <img src="./imagenes/MegaQuesoFamiliar.jpeg" alt="dorito-flamin-hot" class="card-img-top menu-img">
                         <div class="card-body">
                             <h5 class="card-title text-center">Dorito flamin Hot tamaño familiar + Cantidad $30,000</h5>
-                            
+                            <button class="btn-detalle" onclick="toggleDetalle(this)">Detalles</button>
+                            <div class="plato-detalle">
                             <ul>
                                 <li>Pollo desmechado</li>
                                 <li>Carne desmechada</li>
@@ -92,7 +103,8 @@
                                 <li>Tajín</li>
                                 <li>Salsas (Guacamole de la casa-Maíz-Tomate)</li>
                             </ul>
-                            <a href="https://wa.me/+573153644267?text=Hola,%20quiero%20un%20Dorito%20Flamin%20Hot%20familiar%20de%20$30.000" class="btn btn-success" target="_blank">Pedir por WhatsApp</a>
+                        </div>
+                            <a href="https://wa.me/+573153644267?text=Hola,%20quiero%20un%20Dorito%20Flamin%20Hot%20familiar%20de%20$30.000" class="btn btn-success" target="_blank">Pedir por WhatsApp domicilio</a>
                         </div>
                     </div>
                 </div>
@@ -105,5 +117,15 @@
             <br>Emil Jiménez - Desarrollador Web <a href="https://wa.me/+573192364724?text=Hola,%20quiero%20mi%20propio%20menú%20digital." class="btn btn-success" target="_blank">Contáctame</a>
             </p>
         </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            function toggleDetalle(btn) {
+                var detalle = btn.nextElementSibling;
+                detalle.style.display = detalle.style.display === "none" || detalle.style.display === "" ? "block" : "none";
+            }
+        </script>
+
     </body>
 </html>

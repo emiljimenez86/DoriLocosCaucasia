@@ -82,6 +82,18 @@ main {
     font-size: 1.2rem;
 }
 
+.btn-success {
+    width: 100%;
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+    padding: 5px 10px;
+}
+
 .footer {
     position: relative;
     bottom: 0;

@@ -1,87 +1,89 @@
 
-.btn-purple {
-    background-color: purple;
-    color: white;
-    border: none;
-    
+/* Fondo global del sitio */
+/* Importar fuente moderna Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Estilo específico para el enlace de dirección */
+.bg-light a[href*="maps.app.goo.gl"] {
+    color: #007bff !important;
+    text-decoration: none !important;
 }
 
-.btn-purple:hover {
-    background-color: #800080;
-    color: #fff;
+.bg-light a[href*="maps.app.goo.gl"]:hover {
+    color: #0056b3 !important;
+    text-decoration: underline !important;
 }
+
+html, body {
+    background-color: #212529 !important;
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos base para todos los botones */
 .btn {
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     margin-left: 0%;
     margin-right: 0%;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
 }
 
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 16px rgba(0, 0, 0, 0.3),
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Botón púrpura - Dorito Flamin Hot */
+.btn-purple {
+    background: linear-gradient(135deg, #8B008B, #9932CC);
+    color: white;
+    border: none;
+}
+
+.btn-purple:hover {
+    background: linear-gradient(135deg, #9932CC, #8B008B);
+    color: #fff;
+}
+
+/* Botón rojo - Dorito MegaQueso */
 .btn-danger {
     margin-left: 0%;
+    background: linear-gradient(135deg, #DC143C, #FF4500);
+    color: white;
 }
 
-header {
-    background-image: url(./imagenes/empaque.jpg);
+.btn-danger:hover {
+    background: linear-gradient(135deg, #FF4500, #DC143C);
+    color: white;
 }
 
-.megaqueso {
-    background-image: url(./imagenes/doritos-megaqueso.png);
-}
-.tacos {
-    background-image: url(./imagenes/sombrero.jpg);
-    background-position: center;
-}
-
-.img-fluid {
-    margin-top: 0%;
-    border-radius: 10%;
-
-}
-.h5 {
-    font-size: 48px;
-    font-weight: bold;
-
-}
-.h8 {
-    font-weight: bold;
-}
-main {
-    margin-left: 15%;
-    margin-right: 15%;
-
-}
-.h6 {
-    font-size: 22px;
-    font-weight: bold;
-
-}
-
-/* Botón de detalles */
-.btn-detalle {
-    display: block;
-    margin: 5px auto;
-    padding: 5px 10px;
-    border: none;
-    background-color: #ffd700;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.btn-detalle:hover {
-    background-color: #ffcc00;
-}
-
-/* Detalles ocultos */
-.plato-detalle {
-    display: none;
-    margin-top: 5px;
-    font-size: 1.2rem;
-}
-
+/* Botón verde - Comida Mexicana */
 .btn-success {
     width: 100%;
     position: relative;
@@ -92,6 +94,914 @@ main {
     justify-content: center;
     margin: 5px auto;
     padding: 5px 10px;
+    background: linear-gradient(135deg, #228B22, #32CD32);
+    color: white;
+    text-transform: none;
+}
+
+/* Botón estrella - DORIESQUITE */
+.btn-star {
+    width: 100%;
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+    padding: 5px 10px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #1a237e;
+    text-transform: none;
+    border-radius: 20px;
+    box-shadow: 
+        0 4px 8px rgba(255, 215, 0, 0.3),
+        0 2px 4px rgba(255, 165, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-star::before {
+    content: '★';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    color: #1a237e;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.btn-star::after {
+    content: '★';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    color: #1a237e;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #32CD32, #228B22);
+    color: white;
+}
+
+.btn-star:hover {
+    background: linear-gradient(135deg, #FFA500, #FFD700);
+    color: #1a237e;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 16px rgba(255, 215, 0, 0.4),
+        0 4px 8px rgba(255, 165, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.btn-star:hover::before,
+.btn-star:hover::after {
+    animation: starTwinkle 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes starTwinkle {
+    0% {
+        opacity: 0.7;
+        transform: translateY(-50%) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.1);
+    }
+}
+
+/* Botón específico para WhatsApp en tarjetas de productos */
+.product-card .btn-success {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    margin: 8px 0 0 0;
+    text-transform: none;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* Efecto de brillo en hover */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Botón de detalles */
+.btn-detalle {
+    display: block;
+    margin: 8px 0;
+    padding: 6px 12px;
+    border: 1px solid #1a237e;
+    background: transparent;
+    color: #1a237e;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-detalle:hover {
+    background: #1a237e;
+    color: white;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-detalle:active {
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-detalle:hover {
+    background: linear-gradient(135deg, #FFA500, #FFD700);
+    transform: translateY(-1px);
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-detalle:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Detalles ocultos */
+.plato-detalle {
+    display: none;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    border-top: 1px solid #fcf3cf;
+    padding-top: 8px;
+}
+
+.plato-detalle ul {
+    color: #2c3e50;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.plato-detalle li {
+    color: #2c3e50;
+    margin-bottom: 2px;
+    font-size: 0.85rem;
+}
+
+header {
+    background-image: url(./imagenes/empaque.jpg);
+    background-color: #212529;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    z-index: 5;
+}
+
+/* Separador 3D innovador entre header y main */
+.header-separator {
+    height: 30px;
+    background: linear-gradient(135deg, 
+        #212529 0%, 
+        #343a40 25%, 
+        #495057 50%, 
+        #343a40 75%, 
+        #212529 100%);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        inset 0 5px 10px rgba(0, 0, 0, 0.3),
+        0 3px 8px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    margin-top: -5px;
+}
+
+.header-separator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.1), 
+        transparent);
+    animation: shimmer 3s infinite;
+}
+
+.header-separator::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        #667eea, 
+        #764ba2, 
+        #667eea, 
+        transparent);
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+/* Animación de brillo */
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Efecto de profundidad adicional */
+.header-separator .depth-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(45deg, transparent 30%, rgba(0, 0, 0, 0.1) 50%, transparent 70%),
+        linear-gradient(-45deg, transparent 30%, rgba(0, 0, 0, 0.1) 50%, transparent 70%);
+    animation: depthMove 4s ease-in-out infinite;
+}
+
+@keyframes depthMove {
+    0%, 100% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(5px) translateY(-2px); }
+    50% { transform: translateX(-3px) translateY(3px); }
+    75% { transform: translateX(2px) translateY(-1px); }
+}
+
+/* Mantener headers con sus imágenes originales */
+.bg-danger {
+    /* Mantener el color original de Bootstrap para headers */
+}
+
+.megaqueso {
+    background-image: url(./imagenes/doritos-megaqueso.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tacos {
+    background-image: url(./imagenes/sombrero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-fluid {
+    margin-top: 0%;
+    border-radius: 10%;
+
+}
+.h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+}
+.h8 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+main {
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #212529;
+    color: white;
+    min-height: 100vh;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Asegurar que el main con product-container tenga fondo continuo */
+main.product-container {
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #212529;
+    padding: 20px 0;
+}
+
+/* Centrar mejor los botones en pantallas grandes */
+@media (min-width: 768px) {
+    main {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    
+    /* Ajustar color de texto en sección de contacto */
+    .bg-light {
+        background-color: #212529 !important;
+        color: white;
+    }
+    
+    .bg-light h3 {
+        color: white;
+    }
+    
+    .bg-light p {
+        color: #e9ecef;
+    }
+    
+    .bg-light a {
+        color: #17a2b8;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+.h6 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    main {
+        min-height: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 15px 0;
+    }
+    
+    main.product-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 15px 0;
+    }
+    
+    .btn {
+        font-size: 16px;
+        padding: 12px 16px;
+        border-radius: 10px;
+        margin: 4px 0;
+    }
+    
+    .btn-success {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+    
+    .product-card .btn-success {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        margin: 6px 0 0 0;
+    }
+    
+    .btn-detalle {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    /* Ajustar espaciado en móviles */
+    .category {
+        margin-bottom: 8px;
+        font-size: 1.4rem;
+    }
+    
+    .btn-star {
+        font-size: 1.2rem;
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        min-height: auto;
+        margin-left: 3%;
+        margin-right: 3%;
+        padding: 10px 0;
+    }
+    
+    main.product-container {
+        margin-left: 3%;
+        margin-right: 3%;
+        padding: 10px 0;
+    }
+    
+    .btn {
+        font-size: 15px;
+        padding: 8px 12px;
+        border-radius: 6px;
+    }
+    
+    .btn-success {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+    
+    .category {
+        font-size: 1.3rem;
+    }
+    
+    .btn-star {
+        font-size: 1.1rem;
+        padding: 10px 14px;
+    }
+    
+    .product-card .btn-success {
+        font-size: 0.7rem;
+        padding: 5px 8px;
+        margin: 4px 0 0 0;
+    }
+    
+    .btn-detalle {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+        margin: 4px 0;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .plato-detalle {
+        font-size: 0.75rem;
+        margin-top: 4px;
+        padding-top: 4px;
+    }
+    
+    .plato-detalle li {
+        font-size: 0.7rem;
+        margin-bottom: 1px;
+    }
+    
+    .menu-img {
+        height: 140px;
+    }
+    
+    .card-body {
+        padding: 0.5rem;
+    }
+    
+    /* Mejorar espaciado en pantallas muy pequeñas */
+    .row.g-3 {
+        --bs-gutter-x: 0.5rem;
+        --bs-gutter-y: 0.5rem;
+    }
+}
+
+/* Efectos adicionales para botones de categoría */
+.category {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+/* Limitar ancho en pantallas grandes */
+@media (min-width: 768px) {
+    .category {
+        max-width: 350px;
+        font-size: 1.3rem;
+    }
+    
+    .btn-success.category {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .category {
+        max-width: 300px;
+        font-size: 1.4rem;
+    }
+    
+    .btn-success.category {
+        max-width: 250px;
+    }
+}
+
+/* Animación de entrada para los botones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Retraso en la animación para cada botón */
+.btn:nth-child(1) { animation-delay: 0.1s; }
+.btn:nth-child(2) { animation-delay: 0.2s; }
+.btn:nth-child(3) { animation-delay: 0.3s; }
+.btn:nth-child(4) { animation-delay: 0.4s; }
+.btn:nth-child(5) { animation-delay: 0.5s; }
+
+/* Botón Contáctame del footer */
+.contact-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E) !important;
+    color: white !important;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 10px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 4px 8px rgba(37, 211, 102, 0.3),
+        0 2px 4px rgba(37, 211, 102, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    min-width: 120px;
+    max-width: 150px;
+    white-space: nowrap;
+}
+
+.contact-btn:hover {
+    background: linear-gradient(135deg, #128C7E, #25D366) !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 16px rgba(37, 211, 102, 0.4),
+        0 4px 8px rgba(37, 211, 102, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+}
+
+.contact-btn:active {
+    transform: translateY(1px);
+    box-shadow: 
+        0 2px 4px rgba(37, 211, 102, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.contact-btn:hover::before {
+    left: 100%;
+}
+
+/* Botón Volver al Inicio moderno */
+.back-home-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 4px 15px rgba(102, 126, 234, 0.4),
+        0 2px 8px rgba(118, 75, 162, 0.3);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-home-btn::before {
+    content: '←';
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.back-home-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.back-home-btn:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 25px rgba(102, 126, 234, 0.5),
+        0 4px 15px rgba(118, 75, 162, 0.4);
+    text-decoration: none;
+}
+
+.back-home-btn:hover::before {
+    transform: translateX(-3px);
+}
+
+.back-home-btn:hover::after {
+    left: 100%;
+}
+
+.back-home-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 2px 8px rgba(102, 126, 234, 0.4),
+        0 1px 4px rgba(118, 75, 162, 0.3);
+}
+
+/* Responsive para el botón de contacto */
+@media (max-width: 768px) {
+    .contact-btn {
+        font-size: 12px;
+        padding: 6px 16px;
+        margin-left: 5px;
+        min-width: 100px;
+        max-width: 130px;
+    }
+    
+    .back-home-btn {
+        font-size: 12px;
+        padding: 10px 20px;
+        gap: 6px;
+    }
+    
+    .back-home-btn::before {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .back-home-btn {
+        font-size: 11px;
+        padding: 8px 16px;
+        gap: 4px;
+    }
+    
+    .back-home-btn::before {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-btn {
+        font-size: 11px;
+        padding: 5px 12px;
+        margin-left: 3px;
+        display: block;
+        margin: 5px auto;
+        min-width: 90px;
+        max-width: 120px;
+        width: fit-content;
+    }
+}
+
+/* Estilos para páginas de productos */
+.product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    color: white;
+}
+
+.product-card {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid #fcf3cf;
+    background: linear-gradient(145deg, #fef9e7, #fcf3cf);
+    color: #1a237e;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-color: #f4d03f;
+    background: linear-gradient(145deg, #fcf3cf, #fef9e7);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    background-color: #f5f5f5;
+}
+
+/* Imagen completa para DORIESQUITE */
+.product-card .menu-img[alt="doriesquite"] {
+    object-fit: contain;
+    background-color: transparent;
+    padding: 0;
+}
+
+.product-card:hover .menu-img {
+    transform: scale(1.02);
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(26, 35, 126, 0.2);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Centrado y responsividad para productos */
+@media (min-width: 768px) {
+    .product-container .row {
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .product-container .col-md-6 {
+        flex: 0 0 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+        margin-bottom: 2rem;
+        display: flex;
+    }
+    
+    /* Asegurar que las tarjetas tengan la misma altura */
+    .product-container .product-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .product-container .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .product-container .btn-success {
+        margin-top: auto;
+    }
+    
+    .card-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* Centrado específico para main con product-container */
+@media (min-width: 768px) {
+    main.product-container {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    main.product-container {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .product-container .col-md-6 {
+        flex: 0 0 calc(50% - 1.5rem);
+        max-width: calc(50% - 1.5rem);
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .product-container {
+        max-width: 1200px;
+    }
+    
+    .product-container .row {
+        gap: 3rem;
+    }
+}
+
+/* Mejorar espaciado en móviles */
+@media (max-width: 767px) {
+    .product-container {
+        padding: 0 10px;
+    }
+    
+    .product-card {
+        margin-bottom: 1rem;
+    }
+    
+    .menu-img {
+        height: 160px;
+    }
+    
+    /* Imagen completa para DORIESQUITE en móviles */
+    .product-card .menu-img[alt="doriesquite"] {
+        object-fit: contain;
+        background-color: transparent;
+        padding: 0;
+    }
+    
+    .card-body {
+        padding: 0.75rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .btn-detalle {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+        margin: 6px 0;
+    }
+    
+    .plato-detalle {
+        font-size: 0.8rem;
+        margin-top: 6px;
+        padding-top: 6px;
+    }
+    
+    .plato-detalle li {
+        font-size: 0.75rem;
+        margin-bottom: 1px;
+    }
+    
+    /* Ajustar color de texto en sección de contacto para móviles */
+    .bg-light {
+        background-color: #212529 !important;
+        color: white;
+    }
+    
+    .bg-light h3 {
+        color: white;
+    }
+    
+    .bg-light p {
+        color: #e9ecef;
+    }
+    
+    .bg-light a {
+        color: #17a2b8;
+    }
 }
 
 .footer {

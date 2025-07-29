@@ -640,7 +640,8 @@ main.product-container {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-left: 10px;
+    margin-left: 15px;
+    margin-right: 5px;
     display: inline-block;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -653,6 +654,20 @@ main.product-container {
     width: auto;
     min-width: 120px;
     max-width: 150px;
+}
+
+/* Centrar y separar el botón en el footer */
+.footer p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.footer p br {
+    display: none;
+}
     white-space: nowrap;
 }
 
@@ -760,9 +775,14 @@ main.product-container {
     .contact-btn {
         font-size: 12px;
         padding: 6px 16px;
-        margin-left: 5px;
+        margin-left: 0;
+        margin-right: 0;
         min-width: 100px;
         max-width: 130px;
+    }
+    
+    .footer p {
+        gap: 6px;
     }
     
     .back-home-btn {
@@ -792,12 +812,17 @@ main.product-container {
     .contact-btn {
         font-size: 11px;
         padding: 5px 12px;
-        margin-left: 3px;
+        margin-left: 0;
+        margin-right: 0;
         display: block;
         margin: 5px auto;
         min-width: 90px;
         max-width: 120px;
         width: fit-content;
+    }
+    
+    .footer p {
+        gap: 4px;
     }
 }
 
@@ -905,20 +930,34 @@ main.product-container {
     height: auto;
     max-height: 400px;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     transition: transform 0.3s ease;
-    background-color: #f5f5f5;
+    background-color: transparent;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 /* Imagen completa para DORIESQUITE */
 .product-card .menu-img[alt="doriesquite"] {
-    object-fit: contain;
+    object-fit: cover;
     background-color: transparent;
     padding: 0;
 }
 
 .product-card:hover .menu-img {
     transform: scale(1.02);
+}
+
+/* Asegurar que las imágenes no tengan espacios blancos */
+.menu-img {
+    object-fit: cover !important;
+    background-color: transparent !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    outline: none !important;
 }
 
 .card-body {
@@ -1041,29 +1080,52 @@ main.product-container {
     
     /* Cambiar color de letra en hover para móviles */
     .product-card:hover .card-title {
-        color: #1a237e !important;
-        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        color: #ffffff !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-weight: 600;
     }
     
     .product-card:hover .plato-detalle {
-        color: #2c3e50 !important;
+        color: #ffffff !important;
     }
     
     .product-card:hover .plato-detalle li {
-        color: #1a237e !important;
+        color: #ffffff !important;
         font-weight: 500;
-        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    }
+    
+    /* Alternativa con colores más vibrantes para móviles */
+    .product-card:hover .card-title {
+        color: #FFD700 !important; /* Dorado brillante */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        font-weight: 600;
+    }
+    
+    .product-card:hover .plato-detalle {
+        color: #E8F4FD !important; /* Azul muy claro */
+    }
+    
+    .product-card:hover .plato-detalle li {
+        color: #FFE4B5 !important; /* Melocotón claro */
+        font-weight: 500;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     }
     
     .menu-img {
         height: auto;
         max-height: 320px;
         width: 100%;
+        object-fit: cover;
+        background-color: transparent;
+        display: block;
+        margin: 0;
+        padding: 0;
     }
     
     /* Imagen completa para DORIESQUITE en móviles */
     .product-card .menu-img[alt="doriesquite"] {
-        object-fit: contain;
+        object-fit: cover;
         background-color: transparent;
         padding: 0;
     }
